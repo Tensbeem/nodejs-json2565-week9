@@ -26,6 +26,11 @@ const server = http.createServer((req, res) => {
         res.write(`${JsonUser}`)
         res.end()
     }
+    else{
+        res.writeHead(200, { 'Content-Type':'text/plain' })
+        res.write(`404 NOT FOUND`)
+        res.end()
+    }
 
 })
 
